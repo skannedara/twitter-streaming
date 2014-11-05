@@ -1,0 +1,79 @@
+0 info it worked if it ends with ok
+1 verbose cli [ 'node', '/usr/local/bin/npm', 'install' ]
+2 info using npm@1.4.28
+3 info using node@v0.10.32
+4 verbose readDependencies using package.json deps
+5 verbose install where, deps [ '/Users/skannedara/Documents/MyProject/twitter-streaming',
+5 verbose install   [ 'express',
+5 verbose install     'twitter',
+5 verbose install     'socket.io',
+5 verbose install     'oauth',
+5 verbose install     'mongoose',
+5 verbose install     'body-parser',
+5 verbose install     'method-override',
+5 verbose install     'morgan',
+5 verbose install     'readable-stream' ] ]
+6 info preinstall twitter-streaming-node@0.0.1
+7 verbose readDependencies using package.json deps
+8 verbose already installed skipping express@* /Users/skannedara/Documents/MyProject/twitter-streaming
+9 verbose already installed skipping twitter@* /Users/skannedara/Documents/MyProject/twitter-streaming
+10 verbose already installed skipping socket.io@* /Users/skannedara/Documents/MyProject/twitter-streaming
+11 verbose already installed skipping oauth@0.9.12 /Users/skannedara/Documents/MyProject/twitter-streaming
+12 verbose already installed skipping mongoose@~3.8.13 /Users/skannedara/Documents/MyProject/twitter-streaming
+13 verbose already installed skipping body-parser@~1.4.3 /Users/skannedara/Documents/MyProject/twitter-streaming
+14 verbose already installed skipping method-override@~2.1.1 /Users/skannedara/Documents/MyProject/twitter-streaming
+15 verbose already installed skipping morgan@~1.1.1 /Users/skannedara/Documents/MyProject/twitter-streaming
+16 verbose already installed skipping readable-stream@~1.0.2 /Users/skannedara/Documents/MyProject/twitter-streaming
+17 silly resolved []
+18 info build /Users/skannedara/Documents/MyProject/twitter-streaming
+19 verbose linkStuff [ false, false, false, '/Users/skannedara/Documents/MyProject' ]
+20 info linkStuff twitter-streaming-node@0.0.1
+21 verbose linkBins twitter-streaming-node@0.0.1
+22 verbose linkMans twitter-streaming-node@0.0.1
+23 verbose rebuildBundles twitter-streaming-node@0.0.1
+24 verbose rebuildBundles [ '.DS_Store',
+24 verbose rebuildBundles   'body-parser',
+24 verbose rebuildBundles   'express',
+24 verbose rebuildBundles   'method-override',
+24 verbose rebuildBundles   'mongoose',
+24 verbose rebuildBundles   'morgan',
+24 verbose rebuildBundles   'oauth',
+24 verbose rebuildBundles   'readable-stream',
+24 verbose rebuildBundles   'socket.io',
+24 verbose rebuildBundles   'ssl-root-cas',
+24 verbose rebuildBundles   'twitter' ]
+25 verbose rebuild bundle /Users/skannedara/Documents/MyProject/twitter-streaming/node_modules/ssl-root-cas
+26 info build /Users/skannedara/Documents/MyProject/twitter-streaming/node_modules/ssl-root-cas
+27 info preinstall ssl-root-cas@1.1.7
+28 verbose linkStuff [ false,
+28 verbose linkStuff   false,
+28 verbose linkStuff   false,
+28 verbose linkStuff   '/Users/skannedara/Documents/MyProject/twitter-streaming/node_modules' ]
+29 info linkStuff ssl-root-cas@1.1.7
+30 verbose linkBins ssl-root-cas@1.1.7
+31 verbose linkMans ssl-root-cas@1.1.7
+32 verbose rebuildBundles ssl-root-cas@1.1.7
+33 verbose rebuildBundles [ '.DS_Store', 'es6-promise', 'request' ]
+34 info install ssl-root-cas@1.1.7
+35 info postinstall ssl-root-cas@1.1.7
+36 verbose unsafe-perm in lifecycle true
+37 info ssl-root-cas@1.1.7 Failed to exec postinstall script
+38 error ssl-root-cas@1.1.7 postinstall: `node latest.js`
+38 error spawn ENOENT
+39 error Failed at the ssl-root-cas@1.1.7 postinstall script.
+39 error This is most likely a problem with the ssl-root-cas package,
+39 error not with npm itself.
+39 error Tell the author that this fails on your system:
+39 error     node latest.js
+39 error You can get their info via:
+39 error     npm owner ls ssl-root-cas
+39 error There is likely additional logging output above.
+40 error System Darwin 13.4.0
+41 error command "node" "/usr/local/bin/npm" "install"
+42 error cwd /Users/skannedara/Documents/MyProject/twitter-streaming
+43 error node -v v0.10.32
+44 error npm -v 1.4.28
+45 error syscall spawn
+46 error code ELIFECYCLE
+47 error errno ENOENT
+48 verbose exit [ 1, true ]

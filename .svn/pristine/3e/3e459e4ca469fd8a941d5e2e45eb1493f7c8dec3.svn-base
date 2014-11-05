@@ -1,0 +1,121 @@
+<!DOCTYPE html>
+<html lang="en" data-ng-app="twitterDataApp">
+  <head>
+    <title>World wide Twitter Data</title>
+    <link rel="stylesheet" type="text/css" href="css/styles.css"/>
+    <link rel="stylesheet" media="screen" href="css/bootstrap.css">
+  </head>
+  <body class="container"  data-ng-controller="twitterDataControler">
+  <div class="rulesResults">
+  	<div class="input-group tableFilter"> <span class="input-group-addon">Filter</span>
+		<input id="filter" type="text" class="form-control" placeholder="Type here...">
+	</div>
+  <div style="height:40px;clear:both;display:block;">
+    <a class="controls next" href="" data-ng-click="dataRefresh('Next')">next &raquo;</a>
+    <a class="controls previous" href="" data-ng-show="showPrevious" data-ng-click="dataRefresh('Prev')">&laquo; prev</a>
+  </div>
+    <scrollable-table watch="resultData">
+    <table class="table table-striped table-bordered">
+      <thead>
+        <tr>
+          <th sortable-header col="user_name" data-width="12%">user_name</th>
+          <th sortable-header col="user_screen_name" data-width="14%">user_screen_name</th>
+          <th sortable-header col="text" data-width="20%">text</th>
+          <th sortable-header col="created_at" data-width="20%">created_at</th>
+          <th sortable-header col="place_country" data-width="10%">place_country</th>
+          <th sortable-header col="place_name" data-width="8%">place_name</th>
+          <th sortable-header col="id_str" data-width="10%">id_str</th>
+          <th sortable-header col="user_id_str" data-width="7%">user_id_str</th>
+          <th sortable-header col="geo_type" data-width="5%">geo_type</th>
+          <th sortable-header col="geo_coordinates_lat" data-width="10%">geo_coordinates_lat</th>
+          <th sortable-header col="geo_coordinates_lng" data-width="10%">geo_coordinates_lng</th>
+          <th sortable-header col="user_followers_count" data-width="4%">user_followers_count</th>
+          <th sortable-header col="user_friends_count" data-width="4%">user_friends_count</th>
+          <th sortable-header col="user_listed_count" data-width="4%">user_listed_count</th>
+          <th sortable-header col="user_favourites_count" data-width="4%">user_favourites_count</th>
+          <th sortable-header col="user_statuses_count" data-width="4%">user_statuses_count</th>
+          <th sortable-header col="user_created_at" data-width="20%">user_created_at</th>
+          <th sortable-header col="coordinates_type" data-width="5%">coordinates_type</th>
+          <th sortable-header col="coordinates_lat" data-width="10%">coordinates_lat</th>
+          <th sortable-header col="coordinates_lng" data-width="10%">coordinates_lng</th>
+          <th sortable-header col="place_id" data-width="8%">place_id</th>
+          <th sortable-header col="place_url" data-width="20%">place_url</th>
+          <th sortable-header col="place_type" data-width="3%">place_type</th>
+          <th sortable-header col="place_full_name" data-width="9%">place_full_name</th>
+          <th sortable-header col="place_country_cd" data-width="4%">place_country_cd</th>
+          <th sortable-header col="lang" data-width="3%">lang</th>
+          <th sortable-header col="source" data-width="9%">source</th>
+          <th sortable-header col="timestamp_ms" data-width="20%">timestamp_ms</th>
+        </tr>
+      </thead>
+      <tbody class="searchable">
+        <tr data-ng-repeat="twitter in resultData" row-id="{{ twitter.created_at }}" 
+          ng-class="{info: selected == twitter.created_at}" >
+          <td>{{twitter.user_name}}</td>
+          <td>{{twitter.user_screen_name}}</td>
+          <td>{{twitter.text}}</td>
+          <td>{{twitter.created_at}}</td>
+          <td>{{twitter.place_country}}</td>
+          <td>{{twitter.place_name}}</td>
+          <td>{{twitter.id_str}}</td>
+          <td>{{twitter.user_id_str}}</td>
+          <td>{{twitter.geo_type}}</td>
+          <td>{{twitter.geo_coordinates_lat}}</td>
+          <td>{{twitter.geo_coordinates_lng}}</td>
+          <td>{{twitter.user_followers_count}}</td>
+          <td>{{twitter.user_friends_count}}</td>
+          <td>{{twitter.user_listed_count}}</td>
+          <td>{{twitter.user_favourites_count}}</td>
+          <td>{{twitter.user_statuses_count}}</td>
+          <td>{{twitter.user_created_at}}</td>
+          <td>{{twitter.coordinates_type}}</td>
+          <td>{{twitter.coordinates_lat}}</td>
+          <td>{{twitter.coordinates_lng}}</td>
+          <td>{{twitter.place_id}}</td>
+          <td>{{twitter.place_url}}</td>
+          <td>{{twitter.place_type}}</td>
+          <td>{{twitter.place_full_name}}</td>
+          <td>{{twitter.place_country_cd}}</td>
+          <td>{{twitter.lang}}</td>
+          <td>{{twitter.source}}</td>
+          <td>{{twitter.timestamp_ms}}</td>
+        </tr>
+      </tbody>
+    </table>
+    </scrollable-table>
+    <div style="height:25px;clear:both;display:block;">
+      <a class="controls next" href="" data-ng-click="dataRefresh('Next')">next &raquo;</a>
+      <a class="controls previous" href="" data-ng-show="showPrevious" data-ng-click="dataRefresh('Prev')">&laquo; prev</a>
+    </div>
+    </div>
+    <br/><br/><br/>
+  </body>
+	<script type="text/javascript" src="js/jquery-1.10.2.js"></script>
+    <script type="text/javascript" src="js/angular.min.js"></script>
+    <script type="text/javascript" src="js/bootstrap.js"></script>
+    <script type="text/javascript" src="js/twitterDataService.js"></script>
+    <script type="text/javascript" src="js/twitterDataApp.js"></script>
+    <script type="text/javascript" src="js/promise-tracker.js"></script>
+    <script type="text/javascript" src="js/ui-bootstrap-tpls-0.11.0.js"></script>
+    <script type="text/javascript" src="js/angular-scrollable-table.min.js"></script>
+  	<script type="text/javascript">
+      
+      var previousPoint = null;
+
+      $(function() {
+
+        $('#filter').keyup(function () {
+
+            var rex = new RegExp($(this).val(), 'i');
+            $('.searchable tr').hide();
+            $('.searchable tr').filter(function () {
+                return rex.test($(this).text());
+            }).show();
+
+        });
+
+      });
+
+ 		
+	</script>
+</html>

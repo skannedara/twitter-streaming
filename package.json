@@ -1,0 +1,23 @@
+{
+  "name": "twitter-streaming-node",
+  "version": "0.0.1",
+  "author": "SivaKannedara",
+  "scripts": {
+    "start": "node app"
+  },
+  "dependencies": {
+    "express"		: "*",
+    "twitter"		: "*",
+    "socket.io"		: "*",
+    "oauth"			: "0.9.12",
+    "mongoose"      : "~3.8.13",
+    "body-parser"	: "~1.4.3",
+    "method-override": "~2.1.1",
+    "morgan"		: "~1.1.1",
+    "readable-stream": "~1.0.2"
+  },
+  "repository": {
+    "type": "git",
+    "url": "http://github.com/npm/npm.git"
+  }
+}
