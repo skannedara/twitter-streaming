@@ -14,7 +14,8 @@
     "body-parser"	: "~1.4.3",
     "method-override": "~2.1.1",
     "morgan"		: "~1.1.1",
-    "readable-stream": "~1.0.2"
+    "readable-stream": "~1.0.2",
+    "ssl-root-cas": "*"
   },
   "repository": {
     "type": "git",
