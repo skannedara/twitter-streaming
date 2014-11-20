@@ -13,8 +13,8 @@
     "mongoose"      : "~3.8.13",
     "body-parser"	: "~1.4.3",
     "method-override": "~2.1.1",
-    "morgan"		: "~1.1.1",
-    "readable-stream": "~1.0.2",
+    "morgan"		: "*",
+    "readable-stream": "*",
     "ssl-root-cas": "*"
   },
   "repository": {
